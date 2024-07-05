@@ -1,0 +1,47 @@
+{
+  "name": "js",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "@algoz098/vue-player": "^0.4.3",
+    "@display-studio/vue-player": "^0.0.4",
+    "@formkit/auto-animate": "^0.8.2",
+    "@heroicons/react": "^2.1.4",
+    "@heroicons/vue": "^2.1.4",
+    "@iomariani/vue-player": "^0.5.3",
+    "@mahdikhashan/vue3-click-outside": "^0.1.2",
+    "@videojs-player/vue": "^1.0.0",
+    "axios": "^1.7.2",
+    "pinia": "^2.1.7",
+    "simplebar-vue": "^2.3.5",
+    "swiper": "^11.1.4",
+    "video.js": "^7.21.6",
+    "vue": "^3.4.21",
+    "vue-click-outside": "^1.1.0",
+    "vue-plyr": "^7.0.0",
+    "vue-router": "^4.4.0",
+    "vue3-canvas-video-player": "^1.2.3",
+    "vue3-youtube": "^0.1.9"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.8.0",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.23.0",
+    "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.4",
+    "vite": "^5.2.8"
+  }
+}
