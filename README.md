@@ -1,4 +1,4 @@
-# PROJECT WEATHER 
+# PROJECT Movie app
 
 # My technology stack 
 <ul>   
