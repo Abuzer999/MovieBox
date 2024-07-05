@@ -14,4 +14,5 @@
   <li>Eslint</li>   
   <li>Pretterrc</li>   
   <li>Axios</li>
+  <li>kinopoisk API</li>
 </ul>
