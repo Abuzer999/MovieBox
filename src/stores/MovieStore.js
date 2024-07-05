@@ -2,6 +2,10 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import axios from 'axios'
 
+const API_MOVIE = import.meta.env.VITE_MOVIETOP_API;
+const API_SERIES = import.meta.env.VITE_SERIESTOP_API;
+const API_ALL = import.meta.env.VITE_ALLTOP_API;
+
 export const useMovieTopStore = defineStore('movieTopStore', () => {
   const moviesTop = ref([]);
   const cachedPages = {};
@@ -18,7 +22,7 @@ export const useMovieTopStore = defineStore('movieTopStore', () => {
         `https://kinopoiskapiunofficial.tech/api/v2.2/films/collections?type=TOP_250_MOVIES&page=${page}`,
         {
           headers: {
-            'X-API-KEY': 'a1db2678-e7f9-4694-ab43-4c572520e883',
+            'X-API-KEY': API_MOVIE,
             'Content-Type': 'application/json',
           },
         }
@@ -72,7 +76,7 @@ export const useSeriesTopStore = defineStore('seriesTopStore', () => {
         `https://kinopoiskapiunofficial.tech/api/v2.2/films/collections?type=TOP_250_TV_SHOWS&page=${page}`,
         {
           headers: {
-            'X-API-KEY': 'acd7cfeb-2c9b-4ab7-a6e2-bd4466777235',
+            'X-API-KEY': API_SERIES,
             'Content-Type': 'application/json'
           }
         }
@@ -125,7 +129,7 @@ export const useAllStore = defineStore('allStore', () => {
     try {
       const responsive = await axios.get(`https://kinopoiskapiunofficial.tech/api/v2.2/films/collections?type=TOP_POPULAR_ALL&page=${page}`, {
         headers: {
-          'X-API-KEY': '91903492-ae46-4034-a829-f261f68d6492',
+          'X-API-KEY': API_ALL,
           'Content-Type': 'application/json',
       },
       })

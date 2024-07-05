@@ -2,6 +2,8 @@ import { defineStore } from 'pinia'
 import axios from 'axios'
 import { ref } from 'vue'
 
+const API_KEY = import.meta.env.VITE_MOVIESEARCH_API;
+
 export const useSearchStore = defineStore('searchStore', () => {
   const search = ref([])
   const isLoading = ref(false)
@@ -12,7 +14,7 @@ export const useSearchStore = defineStore('searchStore', () => {
         `https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=${valueInp}&page=1`,
         {
           headers: {
-            'X-API-KEY': '66fa4c7f-7bd1-4c79-8ed6-08ce98287e81',
+            'X-API-KEY': API_KEY,
             'Content-Type': 'application/json'
           }
         }

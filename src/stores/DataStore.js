@@ -2,6 +2,12 @@ import { defineStore } from 'pinia'
 import axios from 'axios'
 import { ref } from 'vue'
 
+const API_INFO = import.meta.env.VITE_INFO_API;
+const API_IMAGE = import.meta.env.VITE_IMAGE_API;
+const API_BUDGET = import.meta.env.VITE_BUDGET_API;
+const API_SIMILLAR = import.meta.env.VITE_SIMILLAR_API;
+const API_TRAILER = import.meta.env.VITE_TRAILER_API;
+
 export const useInfoMovie = defineStore('infoMovie', () => {
   const film = ref([])
 
@@ -11,7 +17,7 @@ export const useInfoMovie = defineStore('infoMovie', () => {
         `https://kinopoiskapiunofficial.tech/api/v2.2/films/${id}`,
         {
           headers: {
-            'X-API-KEY': '0b44cf43-af4d-4e92-90b8-e822f2a94935',
+            'X-API-KEY': API_INFO,
             'Content-Type': 'application/json'
           }
         }
@@ -40,7 +46,7 @@ export const useImageMovie = defineStore('imageMovie', () => {
         `https://kinopoiskapiunofficial.tech/api/v2.2/films/${id}/images?type=STILL`,
         {
           headers: {
-            'X-API-KEY': '7b3027ab-7fc6-4ed8-b70a-70519240569f',
+            'X-API-KEY': API_IMAGE,
             'Content-Type': 'application/json'
           }
         }
@@ -73,7 +79,7 @@ export const useBudgetMovie = defineStore('budgetMovie', () => {
         `https://kinopoiskapiunofficial.tech/api/v2.2/films/${idBudget}/box_office`,
         {
           headers: {
-            'X-API-KEY': 'e807779e-43e2-4131-aabc-92dfe578f36f',
+            'X-API-KEY': API_BUDGET,
             'Content-Type': 'application/json'
           }
         }
@@ -102,7 +108,7 @@ export const useSimilarMovie = defineStore('similarMovie', () => {
         `https://kinopoiskapiunofficial.tech/api/v2.2/films/${id}/similars`,
         {
           headers: {
-            'X-API-KEY': '3c57391b-d93f-480f-9200-67b97adc654f',
+            'X-API-KEY': API_SIMILLAR,
             'Content-Type': 'application/json'
           }
         }
@@ -131,7 +137,7 @@ export const useTrailerMovie = defineStore('trailerMovie', () => {
         `https://kinopoiskapiunofficial.tech/api/v2.2/films/${id}/videos`,
         {
           headers: {
-            'X-API-KEY': '3c57391b-d93f-480f-9200-67b97adc654f',
+            'X-API-KEY': API_TRAILER,
             'Content-Type': 'application/json'
           }
         }
