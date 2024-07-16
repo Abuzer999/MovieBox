@@ -35,7 +35,7 @@ export const useMovieTopStore = defineStore('movieTopStore', () => {
         id: movie.kinopoiskId,
         imgUrl: movie.posterUrlPreview,
         date: movie.year,
-        info: movie.countries[0].country,
+        info: movie.countries && movie.countries.length > 0 ? movie.countries[0].country : 'Unknown',
         title: movie.nameRu,
         rate: movie.ratingKinopoisk !== null ? movie.ratingKinopoisk.toString() : 'null',
         teg: movie.genres
@@ -89,7 +89,7 @@ export const useSeriesTopStore = defineStore('seriesTopStore', () => {
         id: series.kinopoiskId,
         imgUrl: series.posterUrlPreview,
         date: series.year,
-        info: series.countries[0].country,
+        info: series.countries && series.countries.length > 0 ? series.countries[0].country : 'Unknown',
         title: series.nameRu,
         rate: series.ratingKinopoisk !== null ? series.ratingKinopoisk.toString() : 'null',
         teg: series.genres
@@ -141,7 +141,7 @@ export const useAllStore = defineStore('allStore', () => {
         id: all.kinopoiskId,
         imgUrl: all.posterUrlPreview,
         date: all.year,
-        info: all.countries[0].country,
+        info: all.countries && all.countries.length > 0 ? all.countries[0].country : 'Unknown',
         title: all.nameRu,
         rate: all.ratingKinopoisk !== null ? all.ratingKinopoisk.toString() : 'null',
         teg: all.genres
