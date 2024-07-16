@@ -72,9 +72,9 @@ const loadData = async (id) => {
         ? filmInfo.film.filmLength
         : 'null',
     country:
-      filmInfo.film.countries[0].country !== null
+      filmInfo.film.countries && filmInfo.film.countries.length > 0
         ? filmInfo.film.countries[0].country
-        : 'null',
+        : 'Unknown',
     isSeries: filmInfo.film.type === 'TV_SERIES'
   }
   isAllLoaded.value = true
